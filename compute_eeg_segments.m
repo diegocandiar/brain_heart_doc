@@ -72,7 +72,7 @@ for i = 1:length(data_trials.trial)
 end
 
 % Select trials 2: based on short IBI
-trials_rejected2 = find(ibi2 < time_offset/1000)';
+trials_rejected2 = find(ibi2 < time_offset)';
 trials_rejected = unique([trials_rejected1 trials_rejected2]);
 trials = setdiff(1:length(ibi2),trials_rejected);
 
