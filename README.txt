@@ -1,0 +1,1 @@
+This pack of functions correspond to the EEG and ECG preprocessing pipeline to obtain Random Forests binary classification of 2 classes of patients using as inputs Heartbeat-Evoked Responses. Additional functions are included to perform classification controls
