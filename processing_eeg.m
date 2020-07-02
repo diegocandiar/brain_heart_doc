@@ -1,8 +1,8 @@
 function [data_eeg, ICA_ECG] = processing_eeg(raw_data_path, elec_positions, neighbours)
 % This code performs EEG preprocessing including frequency filter, bad
 % channels detection and ICA computation. It reads the raw data from the
-% specified path. This functions requires Fieldtrip toolbox
-%
+% specified path. Code adapted for EEG EGI 256 channels + ref channel. 
+% This function requires Fieldtrip toolbox
 % Inputs:
 % raw_data_path: raw data location 
 % elec_positions: fieldtrip struct with electrodes information
