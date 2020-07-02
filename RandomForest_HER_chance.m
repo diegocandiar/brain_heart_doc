@@ -36,8 +36,8 @@ sc = ss*ov;
 tt = ceil((length(time)-ss)/sc); % final number of samples after the reduction
 time = zeros(1,tt); % new time array
 
-for i = 1:L % iteration for all MCS patients
-    for k = 1:ch % iteration for all 256 channels
+for i = 1:L % iteration for all patients
+    for k = 1:ch % iteration for all channels
         for j = 1:tt % iteration for all of the final samples
             tw = ((j-1)*sc+1) : (((j-1)*sc)+ss);
             time(j) = median(tw)/freq;
