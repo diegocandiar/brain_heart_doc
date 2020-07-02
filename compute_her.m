@@ -23,8 +23,8 @@ function [her, data_trials, trials] = compute_her(data_eeg, ibi, indx, time_onse
 
 %% Get EEG epochs
 % define interval
-sample_onset = floor(time_onset/1000 * data_eeg.fsample);
-sample_offset = floor(time_offset/1000 * data_eeg.fsample);
+sample_onset = floor(time_onset * data_eeg.fsample);
+sample_offset = floor(time_offset * data_eeg.fsample);
 
 % redefine trials: 1 HER = 1 trial
 begsample = indx(1:end-1)' + sample_onset;
@@ -55,7 +55,7 @@ for i = 1:length(data_trials.trial)
 end
 
 % Select trials 2: based on short IBI
-trials_rejected2 = find(ibi < time_offset/1000)';
+trials_rejected2 = find(ibi < time_offset)';
 trials_rejected = unique([trials_rejected1 trials_rejected2]);
 trials = setdiff(1:length(ibi),trials_rejected);
 
